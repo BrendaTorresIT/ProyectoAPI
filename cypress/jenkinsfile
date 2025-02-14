@@ -1,0 +1,55 @@
+pipeline {
+    agent any
+
+    environment {
+        SONARQUBE = 'sonarqube' // Nombre del servidor SonarQube configurado en Jenkins
+        SONAR_PROJECT_KEY = 'integration-jenkins' // Reemplaza con la clave de tu proyecto
+        SONAR_PROJECT_NAME = 'integration jenkins' // Nombre del proyecto
+        SONAR_PROJECT_VERSION = '1.0' // Versión del proyecto
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/BrenTorres333/TestAPI.git'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                dir('C:/Users/bre_3/PruebaAPI') { 
+                    bat 'npm install'
+                }
+            }
+        }
+
+        stage('Run Cypress Tests') {
+            steps {
+                dir('C:/Users/bre_3/PruebaAPI/cypress/e2e/Trello') { 
+            bat 'dir'
+            bat 'npx cypress run --spec "testAPI.api.cy.js"'--reporter none
+
+                }
+            }
+        }
+
+        stage('SonarQube Analysis') {
+            steps {
+                dir('e2e/Trello') {
+                    script {
+                        def scannerHome = tool 'SonarQube Scanner'
+                        withSonarQubeEnv('sonarqube') {
+                            bat "${scannerHome}\\bin\\sonar-scanner -Dsonar.projectKey=${SONAR_PROJECT_KEY} -Dsonar.projectName=${SONAR_PROJECT_NAME} -Dsonar.projectVersion=${SONAR_PROJECT_VERSION} -Dsonar.sources=." // Ajusta la ruta según tu estructura
+                        }
+                    }
+                }
+            }
+        }
+
+        stage('Quality Gate') {
+            steps {
+                waitForQualityGate abortPipeline: true
+            }
+        }
+    }
+}
