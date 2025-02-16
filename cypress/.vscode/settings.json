@@ -1,0 +1,18 @@
+{
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.formatOnType": true, // required
+    "editor.formatOnPaste": true, // optional
+    "editor.formatOnSave": true, // optional
+    "editor.formatOnSaveMode": "file", // required to format on save
+    //"files.autoSave": false, // onFocusChange optional but recommended
+    "vs-code-prettier-eslint.prettierLast": false, // set as "true" to run 'prettier' last not first
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.enablePersistentSessions": true,
+    "explorer.fileNesting.enabled": true,
+    "cSpell.ignoreRegExpList": [
+        "/.*/" 
+    ]
+
+
+
+}  
