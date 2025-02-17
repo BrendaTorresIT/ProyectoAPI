@@ -1,33 +1,27 @@
 pipeline {
     agent any
 
-    
-
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/BrenTorres333/TestAPI.git'
+                git branch: 'main', url: 'https://github.com/BrendaTorresIT/ProyectoAPI.git'
             }
         }
 
         stage('Install Dependencies') {
-            steps {
-                dir('C:/Users/bre_3/PruebaAPI') { 
-                    bat 'npm install'
-                }
-            }
+      steps {
+        dir('C:/Users/bre_3/QualityAssure/TestAPI') {
+          bat 'npm install'
+          bat 'npx cypress install'
         }
-
-        stage('Run Cypress Tests') {
-            steps {
-                dir('C:/Users/bre_3/PruebaAPI/cypress/e2e/Trello') { 
-            bat 'dir'
-            bat 'npx cypress run --spec "testAPI.api.cy.js"'--reporter none
-
-                }
-            }
-        }
-
-        
+      }
     }
+    stage('Run Cypress Tests') {
+      steps {
+        dir('C:/Users/bre_3/QualityAssure/TestAPI/cypress/e2e/Trello') {
+          bat 'npx cypress run --spec "testAPI.api.cy.js" --reporter none'
+        }
+      }
+    }
+  }
 }

@@ -10,7 +10,7 @@ describe('API Tests', () =>{
         
             it('TC1: REQUEST de Método GET a la API de TRELLO para OBTENER CARD1', () => {
                 
-                cy.api({
+                cy.request({
                     method: 'GET',
                     url: 'https://api.trello.com/1/cards/' + card1, 
                     qs: {
@@ -27,7 +27,7 @@ describe('API Tests', () =>{
 
             it('TC2: REQUEST de Método GET a la API de TRELLO para OBTENER CARD2', () => {
                 
-                cy.api({
+                cy.request({
                     method: 'GET',
                     url: 'https://api.trello.com/1/cards/' + card2, 
                     qs: {
@@ -42,7 +42,7 @@ describe('API Tests', () =>{
                 });
             });
             it('TC3: REQUEST de Método POST a la API de TRELLO para CREAR UNA SEGUNDA CARD', () => {
-                cy.api({
+                cy.request({
                     method: 'POST',
                     url: 'https://api.trello.com/1/cards',
                     qs: {
@@ -61,7 +61,7 @@ describe('API Tests', () =>{
             
             });
             it('TC4: REQUEST de Método POST a la API de TRELLO para CREAR UNA TERCERA CARD', () => {
-                cy.api({
+                cy.request({
                     method: 'POST',
                     url: 'https://api.trello.com/1/cards',
                     qs: {
@@ -81,7 +81,7 @@ describe('API Tests', () =>{
 
             it('TC5: REQUEST de Método PUT a la API de TRELLO para EDITAR CARD1', () => {
                 
-                cy.api({
+                cy.request({
                     method: 'PUT',
                     url: 'https://api.trello.com/1/cards/' + card1, 
                     qs: {
@@ -111,7 +111,7 @@ describe('API Tests', () =>{
             });
             it('TC4: REQUEST de Método DELETE a la API de TRELLO para ELIMINAR CARD2', () => {
                 
-                cy.api({
+                cy.request({
                     method: 'DELETE',
                     url: 'https://api.trello.com/1/cards/' + card2, 
                     qs: {

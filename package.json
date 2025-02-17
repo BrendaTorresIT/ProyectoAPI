@@ -1,5 +1,5 @@
 {
-  "name": "dux",
+  "name": "ProyectoAPI",
   "version": "1.0.0",
   "description": "",
   "main": "cypress.config.js",
@@ -20,7 +20,7 @@
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.40.2",
     "allure-commandline": "^2.29.0",
-    "cypress": "^13.6.2",
+    "cypress": "^13.17.0",
     "cypress-multi-reporters": "^1.6.4",
     "cypress-plugin-api": "^2.11.2",
     "junit-report-merger": "^7.0.0",
