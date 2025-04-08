@@ -1,0 +1,225 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 0,
+    "pending": 0,
+    "failures": 6,
+    "start": "2025-02-16T23:28:18.297Z",
+    "end": "2025-02-16T23:28:18.509Z",
+    "duration": 212,
+    "testsRegistered": 6,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "44047abe-9852-4c01-bd8e-ba59a4db38e7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Trello\\testAPI.api.cy.js",
+      "file": "cypress\\e2e\\Trello\\testAPI.api.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "00a39cdf-a947-4566-ad92-723d23a077f1",
+          "title": "API Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC1: REQUEST de Método GET a la API de TRELLO para OBTENER CARD1",
+              "fullTitle": "API Tests TC1: REQUEST de Método GET a la API de TRELLO para OBTENER CARD1",
+              "timedOut": null,
+              "duration": 26,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.api({\n  method: 'GET',\n  url: 'https://api.trello.com/1/cards/' + card1,\n  qs: {\n    key: key,\n    token: token\n  }\n}).then(response => {\n  expect(response).to.be.an('object');\n  expect(response.status).to.eql(200);\n});",
+              "err": {
+                "message": "TypeError: cy.api is not a function",
+                "estack": "TypeError: cy.api is not a function\n    at Context.eval (webpack://dux/./cypress/e2e/Trello/testAPI.api.cy.js:13:19)",
+                "diff": null
+              },
+              "uuid": "17cf2962-8bfc-49b1-8449-eb3ce7a245db",
+              "parentUUID": "00a39cdf-a947-4566-ad92-723d23a077f1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC2: REQUEST de Método GET a la API de TRELLO para OBTENER CARD2",
+              "fullTitle": "API Tests TC2: REQUEST de Método GET a la API de TRELLO para OBTENER CARD2",
+              "timedOut": null,
+              "duration": 9,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.api({\n  method: 'GET',\n  url: 'https://api.trello.com/1/cards/' + card2,\n  qs: {\n    key: key,\n    token: token\n  }\n}).then(response => {\n  expect(response).to.be.an('object');\n  expect(response.status).to.eql(200);\n});",
+              "err": {
+                "message": "TypeError: cy.api is not a function",
+                "estack": "TypeError: cy.api is not a function\n    at Context.eval (webpack://dux/./cypress/e2e/Trello/testAPI.api.cy.js:30:19)",
+                "diff": null
+              },
+              "uuid": "0ee4689d-1857-41f0-a99b-60f51ca3c1a8",
+              "parentUUID": "00a39cdf-a947-4566-ad92-723d23a077f1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC3: REQUEST de Método POST a la API de TRELLO para CREAR UNA SEGUNDA CARD",
+              "fullTitle": "API Tests TC3: REQUEST de Método POST a la API de TRELLO para CREAR UNA SEGUNDA CARD",
+              "timedOut": null,
+              "duration": 10,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.api({\n  method: 'POST',\n  url: 'https://api.trello.com/1/cards',\n  qs: {\n    key: key,\n    token: token,\n    idList: listA,\n    name: 'Segunda Card'\n  }\n}).then(response => {\n  expect(response).to.be.an('object');\n  expect(response.status).to.eql(200);\n  expect(response.body.name).to.eql('Segunda Card');\n  cardID = response.body.id;\n});",
+              "err": {
+                "message": "TypeError: cy.api is not a function",
+                "estack": "TypeError: cy.api is not a function\n    at Context.eval (webpack://dux/./cypress/e2e/Trello/testAPI.api.cy.js:45:19)",
+                "diff": null
+              },
+              "uuid": "6a7f1c3c-8821-498f-b95b-3872cd151646",
+              "parentUUID": "00a39cdf-a947-4566-ad92-723d23a077f1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4: REQUEST de Método POST a la API de TRELLO para CREAR UNA TERCERA CARD",
+              "fullTitle": "API Tests TC4: REQUEST de Método POST a la API de TRELLO para CREAR UNA TERCERA CARD",
+              "timedOut": null,
+              "duration": 6,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.api({\n  method: 'POST',\n  url: 'https://api.trello.com/1/cards',\n  qs: {\n    key: key,\n    token: token,\n    idList: listA,\n    name: 'Tercera Card'\n  }\n}).then(response => {\n  expect(response).to.be.an('object');\n  expect(response.status).to.eql(200);\n  expect(response.body.name).to.eql('Tercera Card');\n  cardID = response.body.id;\n});",
+              "err": {
+                "message": "TypeError: cy.api is not a function",
+                "estack": "TypeError: cy.api is not a function\n    at Context.eval (webpack://dux/./cypress/e2e/Trello/testAPI.api.cy.js:64:19)",
+                "diff": null
+              },
+              "uuid": "5fd49594-2bb8-4a41-ab1f-324a8be06bf5",
+              "parentUUID": "00a39cdf-a947-4566-ad92-723d23a077f1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC5: REQUEST de Método PUT a la API de TRELLO para EDITAR CARD1",
+              "fullTitle": "API Tests TC5: REQUEST de Método PUT a la API de TRELLO para EDITAR CARD1",
+              "timedOut": null,
+              "duration": 8,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.api({\n  method: 'PUT',\n  url: 'https://api.trello.com/1/cards/' + card1,\n  qs: {\n    key: key,\n    token: token,\n    name: 'Primera card editada por Cypress',\n    desc: 'Esto es una descripción para editar la Card previamente creada'\n  },\n  body: {\n    cover: {\n      color: 'green',\n      brightness: 'dark',\n      size: 'full'\n    }\n  }\n}).then(({\n  body\n}) => {\n  expect(body).to.be.an('object');\n  expect(body.id).to.eql(card1);\n  expect(body.name).to.eql('Primera card editada por Cypress');\n  expect(body.desc).to.include('Esto es una descripción');\n  expect(body.cover).to.be.an('object').and.to.include({\n    color: 'green'\n  });\n});",
+              "err": {
+                "message": "TypeError: cy.api is not a function",
+                "estack": "TypeError: cy.api is not a function\n    at Context.eval (webpack://dux/./cypress/e2e/Trello/testAPI.api.cy.js:84:19)",
+                "diff": null
+              },
+              "uuid": "77f50941-5302-4d34-92db-ab5bdb98e759",
+              "parentUUID": "00a39cdf-a947-4566-ad92-723d23a077f1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4: REQUEST de Método DELETE a la API de TRELLO para ELIMINAR CARD2",
+              "fullTitle": "API Tests TC4: REQUEST de Método DELETE a la API de TRELLO para ELIMINAR CARD2",
+              "timedOut": null,
+              "duration": 6,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.api({\n  method: 'DELETE',\n  url: 'https://api.trello.com/1/cards/' + card2,\n  qs: {\n    token: token\n  }\n}).then(response => {\n  expect(response.body.limits).to.be.empty;\n  expect(response.status).to.eql(200);\n});",
+              "err": {
+                "message": "TypeError: cy.api is not a function",
+                "estack": "TypeError: cy.api is not a function\n    at Context.eval (webpack://dux/./cypress/e2e/Trello/testAPI.api.cy.js:114:19)",
+                "diff": null
+              },
+              "uuid": "1b24811b-334a-422a-a926-f83e595e1685",
+              "parentUUID": "00a39cdf-a947-4566-ad92-723d23a077f1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "17cf2962-8bfc-49b1-8449-eb3ce7a245db",
+            "0ee4689d-1857-41f0-a99b-60f51ca3c1a8",
+            "6a7f1c3c-8821-498f-b95b-3872cd151646",
+            "5fd49594-2bb8-4a41-ab1f-324a8be06bf5",
+            "77f50941-5302-4d34-92db-ab5bdb98e759",
+            "1b24811b-334a-422a-a926-f83e595e1685"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 65,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/test_results/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

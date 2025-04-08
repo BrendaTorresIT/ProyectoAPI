@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.430" tests="6" failures="3">
+  <testsuite name="Root Suite" timestamp="2025-04-08T02:05:17" tests="0" file="cypress\e2e\Trello\testAPI.api.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API Tests" timestamp="2025-04-08T02:05:17" tests="6" time="3.424" failures="3">
+    <testcase name="TC1: REQUEST de Método GET a la API de TRELLO para OBTENER CARD1" time="0.000" classname="API Tests TC1: REQUEST de Método GET a la API de TRELLO para OBTENER CARD1">
+      <failure message="cy.api is not a function" type="TypeError"><![CDATA[TypeError: cy.api is not a function
+    at Context.eval (webpack://ProyectoAPI/./cypress/e2e/Trello/testAPI.api.cy.js:18:15)]]></failure>
+    </testcase>
+    <testcase name="TC2: REQUEST de Método GET a la API de TRELLO para OBTENER CARD2" time="1.001" classname="API Tests TC2: REQUEST de Método GET a la API de TRELLO para OBTENER CARD2">
+    </testcase>
+    <testcase name="TC3: REQUEST de Método POST a la API de TRELLO para CREAR UNA SEGUNDA CARD" time="0.634" classname="API Tests TC3: REQUEST de Método POST a la API de TRELLO para CREAR UNA SEGUNDA CARD">
+    </testcase>
+    <testcase name="TC4: REQUEST de Método POST a la API de TRELLO para CREAR UNA TERCERA CARD" time="0.560" classname="API Tests TC4: REQUEST de Método POST a la API de TRELLO para CREAR UNA TERCERA CARD">
+    </testcase>
+    <testcase name="TC5: REQUEST de Método PUT a la API de TRELLO para EDITAR CARD1" time="0.000" classname="API Tests TC5: REQUEST de Método PUT a la API de TRELLO para EDITAR CARD1">
+      <failure message="expected { Object (idAttachment, color, ...) } to have property &apos;color&apos; of &apos;green&apos;, but got &apos;yellow&apos;" type="AssertionError"><![CDATA[AssertionError: expected { Object (idAttachment, color, ...) } to have property 'color' of 'green', but got 'yellow'
+    at Context.eval (webpack://ProyectoAPI/./cypress/e2e/Trello/testAPI.api.cy.js:115:69)
+
+      + expected - actual
+
+      -'yellow'
+      +'green'
+      ]]></failure>
+    </testcase>
+    <testcase name="TC6: REQUEST de Método DELETE a la API de TRELLO para ELIMINAR CARD2" time="0.000" classname="API Tests TC6: REQUEST de Método DELETE a la API de TRELLO para ELIMINAR CARD2">
+      <failure message="`cy.request()` failed on:
+
+https://api.trello.com/1/cards/67e374046f3c878317e23d28?key=8debb4f15c5425eb56779ba7be2e67ef&amp;token=ATTA4fbd5476ee500f59c17e42cf03e1a74228448fc95210fe5db94d12e2eb06149a8390DF71
+
+The response we received from your web server was:
+
+  &gt; 404: Not Found
+
+This was considered a failure because the status code was not `2xx` or `3xx`.
+
+If you do not want status codes to cause failures pass the option: `failOnStatusCode: false`
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: DELETE
+URL: https://api.trello.com/1/cards/67e374046f3c878317e23d28?key=8debb4f15c5425eb56779ba7be2e67ef&amp;token=ATTA4fbd5476ee500f59c17e42cf03e1a74228448fc95210fe5db94d12e2eb06149a8390DF71
+Headers: {
+  &quot;Connection&quot;: &quot;keep-alive&quot;,
+  &quot;user-agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.17.0 Chrome/118.0.5993.159 Electron/27.3.10 Safari/537.36&quot;,
+  &quot;accept&quot;: &quot;*/*&quot;,
+  &quot;accept-encoding&quot;: &quot;gzip, deflate&quot;,
+  &quot;content-length&quot;: 0
+}
+
+-----------------------------------------------------------
+
+The response we got was:
+
+Status: 404 - Not Found
+Headers: {
+  &quot;content-type&quot;: &quot;text/plain; charset=utf-8&quot;,
+  &quot;content-length&quot;: &quot;37&quot;,
+  &quot;connection&quot;: &quot;keep-alive&quot;,
+  &quot;date&quot;: &quot;Tue, 08 Apr 2025 02:05:21 GMT&quot;,
+  &quot;referrer-policy&quot;: &quot;strict-origin-when-cross-origin&quot;,
+  &quot;x-dns-prefetch-control&quot;: &quot;off&quot;,
+  &quot;x-download-options&quot;: &quot;noopen&quot;,
+  &quot;x-frame-options&quot;: &quot;DENY&quot;,
+  &quot;x-permitted-cross-domain-policies&quot;: &quot;none&quot;,
+  &quot;surrogate-control&quot;: &quot;no-store&quot;,
+  &quot;cache-control&quot;: &quot;no-store, no-cache, must-revalidate, proxy-revalidate&quot;,
+  &quot;expires&quot;: &quot;0&quot;,
+  &quot;x-trello-version&quot;: &quot;1.341914.0&quot;,
+  &quot;x-trello-environment&quot;: &quot;Production&quot;,
+  &quot;access-control-allow-origin&quot;: &quot;*&quot;,
+  &quot;access-control-allow-methods&quot;: &quot;GET, PUT, POST, DELETE&quot;,
+  &quot;access-control-allow-headers&quot;: &quot;Authorization, Accept, Content-Type&quot;,
+  &quot;access-control-expose-headers&quot;: &quot;x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining, retry-after&quot;,
+  &quot;x-rate-limit-api-token-interval-ms&quot;: &quot;10000&quot;,
+  &quot;x-rate-limit-api-token-max&quot;: &quot;100&quot;,
+  &quot;x-rate-limit-api-token-remaining&quot;: &quot;97&quot;,
+  &quot;x-rate-limit-db-query-time-interval-ms&quot;: &quot;600000&quot;,
+  &quot;x-rate-limit-db-query-time-max&quot;: &quot;7200000&quot;,
+  &quot;x-rate-limit-db-query-time-remaining&quot;: &quot;7199990&quot;,
+  &quot;x-rate-limit-api-key-interval-ms&quot;: &quot;10000&quot;,
+  &quot;x-rate-limit-api-key-max&quot;: &quot;300&quot;,
+  &quot;x-rate-limit-api-key-remaining&quot;: &quot;297&quot;,
+  &quot;x-rate-limit-member-interval-ms&quot;: &quot;10000&quot;,
+  &quot;x-rate-limit-member-max&quot;: &quot;375&quot;,
+  &quot;x-rate-limit-member-remaining&quot;: &quot;372&quot;,
+  &quot;server&quot;: &quot;AtlassianEdge&quot;,
+  &quot;x-content-type-options&quot;: &quot;nosniff&quot;,
+  &quot;x-xss-protection&quot;: &quot;1; mode=block&quot;,
+  &quot;atl-traceid&quot;: &quot;492fd823548c43c78811735ce3bac455&quot;,
+  &quot;atl-request-id&quot;: &quot;492fd823-548c-43c7-8811-735ce3bac455&quot;,
+  &quot;strict-transport-security&quot;: &quot;max-age=63072000; preload&quot;,
+  &quot;report-to&quot;: &quot;{\&quot;endpoints\&quot;: [{\&quot;url\&quot;: \&quot;https://dz8aopenkvv6s.cloudfront.net\&quot;}], \&quot;group\&quot;: \&quot;endpoint-1\&quot;, \&quot;include_subdomains\&quot;: true, \&quot;max_age\&quot;: 600}&quot;,
+  &quot;nel&quot;: &quot;{\&quot;failure_fraction\&quot;: 0.001, \&quot;include_subdomains\&quot;: true, \&quot;max_age\&quot;: 600, \&quot;report_to\&quot;: \&quot;endpoint-1\&quot;}&quot;,
+  &quot;server-timing&quot;: &quot;atl-edge;dur=54,atl-edge-internal;dur=4,atl-edge-upstream;dur=51,atl-edge-pop;desc=\&quot;aws-us-east-1\&quot;&quot;,
+  &quot;x-cache&quot;: &quot;Error from cloudfront&quot;,
+  &quot;via&quot;: &quot;1.1 7e4ac70c007f1c5bd8d4d7848e401ec6.cloudfront.net (CloudFront)&quot;,
+  &quot;x-amz-cf-pop&quot;: &quot;EZE50-P3&quot;,
+  &quot;x-amz-cf-id&quot;: &quot;DmOm9z3WJ0tacfHJsqnu9WupXetic3M2jfe-TdYKEP2lyGdU1me7fQ==&quot;
+}
+Body: The requested resource was not found.
+
+
+https://on.cypress.io/request" type="CypressError"><![CDATA[CypressError: `cy.request()` failed on:
+
+https://api.trello.com/1/cards/67e374046f3c878317e23d28?key=8debb4f15c5425eb56779ba7be2e67ef&token=ATTA4fbd5476ee500f59c17e42cf03e1a74228448fc95210fe5db94d12e2eb06149a8390DF71
+
+The response we received from your web server was:
+
+  > 404: Not Found
+
+This was considered a failure because the status code was not `2xx` or `3xx`.
+
+If you do not want status codes to cause failures pass the option: `failOnStatusCode: false`
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: DELETE
+URL: https://api.trello.com/1/cards/67e374046f3c878317e23d28?key=8debb4f15c5425eb56779ba7be2e67ef&token=ATTA4fbd5476ee500f59c17e42cf03e1a74228448fc95210fe5db94d12e2eb06149a8390DF71
+Headers: {
+  "Connection": "keep-alive",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.17.0 Chrome/118.0.5993.159 Electron/27.3.10 Safari/537.36",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "content-length": 0
+}
+
+-----------------------------------------------------------
+
+The response we got was:
+
+Status: 404 - Not Found
+Headers: {
+  "content-type": "text/plain; charset=utf-8",
+  "content-length": "37",
+  "connection": "keep-alive",
+  "date": "Tue, 08 Apr 2025 02:05:21 GMT",
+  "referrer-policy": "strict-origin-when-cross-origin",
+  "x-dns-prefetch-control": "off",
+  "x-download-options": "noopen",
+  "x-frame-options": "DENY",
+  "x-permitted-cross-domain-policies": "none",
+  "surrogate-control": "no-store",
+  "cache-control": "no-store, no-cache, must-revalidate, proxy-revalidate",
+  "expires": "0",
+  "x-trello-version": "1.341914.0",
+  "x-trello-environment": "Production",
+  "access-control-allow-origin": "*",
+  "access-control-allow-methods": "GET, PUT, POST, DELETE",
+  "access-control-allow-headers": "Authorization, Accept, Content-Type",
+  "access-control-expose-headers": "x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining, retry-after",
+  "x-rate-limit-api-token-interval-ms": "10000",
+  "x-rate-limit-api-token-max": "100",
+  "x-rate-limit-api-token-remaining": "97",
+  "x-rate-limit-db-query-time-interval-ms": "600000",
+  "x-rate-limit-db-query-time-max": "7200000",
+  "x-rate-limit-db-query-time-remaining": "7199990",
+  "x-rate-limit-api-key-interval-ms": "10000",
+  "x-rate-limit-api-key-max": "300",
+  "x-rate-limit-api-key-remaining": "297",
+  "x-rate-limit-member-interval-ms": "10000",
+  "x-rate-limit-member-max": "375",
+  "x-rate-limit-member-remaining": "372",
+  "server": "AtlassianEdge",
+  "x-content-type-options": "nosniff",
+  "x-xss-protection": "1; mode=block",
+  "atl-traceid": "492fd823548c43c78811735ce3bac455",
+  "atl-request-id": "492fd823-548c-43c7-8811-735ce3bac455",
+  "strict-transport-security": "max-age=63072000; preload",
+  "report-to": "{\"endpoints\": [{\"url\": \"https://dz8aopenkvv6s.cloudfront.net\"}], \"group\": \"endpoint-1\", \"include_subdomains\": true, \"max_age\": 600}",
+  "nel": "{\"failure_fraction\": 0.001, \"include_subdomains\": true, \"max_age\": 600, \"report_to\": \"endpoint-1\"}",
+  "server-timing": "atl-edge;dur=54,atl-edge-internal;dur=4,atl-edge-upstream;dur=51,atl-edge-pop;desc=\"aws-us-east-1\"",
+  "x-cache": "Error from cloudfront",
+  "via": "1.1 7e4ac70c007f1c5bd8d4d7848e401ec6.cloudfront.net (CloudFront)",
+  "x-amz-cf-pop": "EZE50-P3",
+  "x-amz-cf-id": "DmOm9z3WJ0tacfHJsqnu9WupXetic3M2jfe-TdYKEP2lyGdU1me7fQ=="
+}
+Body: The requested resource was not found.
+
+
+https://on.cypress.io/request
+    at <unknown> (http://localhost:50404/__cypress/runner/cypress_runner.js:132876:72)
+    at tryCatcher (http://localhost:50404/__cypress/runner/cypress_runner.js:1830:23)
+    at Promise._settlePromiseFromHandler (http://localhost:50404/__cypress/runner/cypress_runner.js:1542:31)
+    at Promise._settlePromise (http://localhost:50404/__cypress/runner/cypress_runner.js:1599:18)
+    at Promise._settlePromise0 (http://localhost:50404/__cypress/runner/cypress_runner.js:1644:10)
+    at Promise._settlePromises (http://localhost:50404/__cypress/runner/cypress_runner.js:1724:18)
+    at _drainQueueStep (http://localhost:50404/__cypress/runner/cypress_runner.js:2430:12)
+    at _drainQueue (http://localhost:50404/__cypress/runner/cypress_runner.js:2423:9)
+    at Async._drainQueues (http://localhost:50404/__cypress/runner/cypress_runner.js:2439:5)
+    at Async.drainQueues (http://localhost:50404/__cypress/runner/cypress_runner.js:2309:14)
+From Your Spec Code:
+    at Context.eval (webpack://ProyectoAPI/./cypress/e2e/Trello/testAPI.api.cy.js:121:19)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

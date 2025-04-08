@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.209" tests="6" failures="6">
+  <testsuite name="Root Suite" timestamp="2025-02-16T23:29:46" tests="0" file="cypress\e2e\Trello\testAPI.api.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API Tests" timestamp="2025-02-16T23:29:46" tests="6" time="0.205" failures="6">
+    <testcase name="TC1: REQUEST de Método GET a la API de TRELLO para OBTENER CARD1" time="0.000" classname="API Tests TC1: REQUEST de Método GET a la API de TRELLO para OBTENER CARD1">
+      <failure message="cy.api is not a function" type="TypeError"><![CDATA[TypeError: cy.api is not a function
+    at Context.eval (webpack://dux/./cypress/e2e/Trello/testAPI.api.cy.js:13:19)]]></failure>
+    </testcase>
+    <testcase name="TC2: REQUEST de Método GET a la API de TRELLO para OBTENER CARD2" time="0.000" classname="API Tests TC2: REQUEST de Método GET a la API de TRELLO para OBTENER CARD2">
+      <failure message="cy.api is not a function" type="TypeError"><![CDATA[TypeError: cy.api is not a function
+    at Context.eval (webpack://dux/./cypress/e2e/Trello/testAPI.api.cy.js:30:19)]]></failure>
+    </testcase>
+    <testcase name="TC3: REQUEST de Método POST a la API de TRELLO para CREAR UNA SEGUNDA CARD" time="0.000" classname="API Tests TC3: REQUEST de Método POST a la API de TRELLO para CREAR UNA SEGUNDA CARD">
+      <failure message="cy.api is not a function" type="TypeError"><![CDATA[TypeError: cy.api is not a function
+    at Context.eval (webpack://dux/./cypress/e2e/Trello/testAPI.api.cy.js:45:19)]]></failure>
+    </testcase>
+    <testcase name="TC4: REQUEST de Método POST a la API de TRELLO para CREAR UNA TERCERA CARD" time="0.000" classname="API Tests TC4: REQUEST de Método POST a la API de TRELLO para CREAR UNA TERCERA CARD">
+      <failure message="cy.api is not a function" type="TypeError"><![CDATA[TypeError: cy.api is not a function
+    at Context.eval (webpack://dux/./cypress/e2e/Trello/testAPI.api.cy.js:64:19)]]></failure>
+    </testcase>
+    <testcase name="TC5: REQUEST de Método PUT a la API de TRELLO para EDITAR CARD1" time="0.000" classname="API Tests TC5: REQUEST de Método PUT a la API de TRELLO para EDITAR CARD1">
+      <failure message="cy.api is not a function" type="TypeError"><![CDATA[TypeError: cy.api is not a function
+    at Context.eval (webpack://dux/./cypress/e2e/Trello/testAPI.api.cy.js:84:19)]]></failure>
+    </testcase>
+    <testcase name="TC4: REQUEST de Método DELETE a la API de TRELLO para ELIMINAR CARD2" time="0.000" classname="API Tests TC4: REQUEST de Método DELETE a la API de TRELLO para ELIMINAR CARD2">
+      <failure message="cy.api is not a function" type="TypeError"><![CDATA[TypeError: cy.api is not a function
+    at Context.eval (webpack://dux/./cypress/e2e/Trello/testAPI.api.cy.js:114:19)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

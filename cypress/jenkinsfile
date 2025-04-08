@@ -1,0 +1,37 @@
+pipeline {
+    agent any
+
+    options {
+        ansiColor('xterm')
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/BrendaTorresIT/ProyectoAPI.git'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                dir('QualityAssure/TestAPI') {
+                    bat 'npm install'
+                }
+            }
+        }
+
+        stage('Run Cypress Tests') {
+            steps {
+                dir('QualityAssure/TestAPI') {
+                    bat 'echo MOSTRANDO ARCHIVOS...'
+                    bat 'dir'
+                    bat 'echo CONTENIDO DE cypress.config.js:'
+                    bat 'type cypress.config.js'
+                    
+                    // Forzar lectura del archivo de configuración
+                    bat 'npx cypress run --config-file cypress.config.js --spec "cypress/e2e/testAPI.api.cy.js"'
+                }
+            }
+        }
+    }
+}

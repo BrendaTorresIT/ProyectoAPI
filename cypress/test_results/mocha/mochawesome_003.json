@@ -1,0 +1,210 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 4,
+    "pending": 0,
+    "failures": 2,
+    "start": "2025-04-07T02:55:46.454Z",
+    "end": "2025-04-07T02:55:49.925Z",
+    "duration": 3471,
+    "testsRegistered": 6,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ac266ed7-b60b-4e48-9265-2d3f945c6f47",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Trello\\testAPI.api.cy.js",
+      "file": "cypress\\e2e\\Trello\\testAPI.api.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "815c7d0a-a38c-4bca-88a3-e4861741fb1b",
+          "title": "API Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC1: REQUEST de Método GET a la API de TRELLO para OBTENER CARD1",
+              "fullTitle": "API Tests TC1: REQUEST de Método GET a la API de TRELLO para OBTENER CARD1",
+              "timedOut": null,
+              "duration": 674,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.api({\n  method: 'GET',\n  url: 'https://api.trello.com/1/cards/' + card1,\n  qs: {\n    key: key,\n    token: token\n  }\n}).then(response => {\n  expect(response).to.be.an('object');\n  expect(response.status).to.eql(200);\n});",
+              "err": {},
+              "uuid": "5089d2c6-b512-4f20-896c-f57cf0c4c0d1",
+              "parentUUID": "815c7d0a-a38c-4bca-88a3-e4861741fb1b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC2: REQUEST de Método GET a la API de TRELLO para OBTENER CARD2",
+              "fullTitle": "API Tests TC2: REQUEST de Método GET a la API de TRELLO para OBTENER CARD2",
+              "timedOut": null,
+              "duration": 332,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'GET',\n  url: 'https://api.trello.com/1/cards/' + card2,\n  qs: {\n    key: key,\n    token: token\n  }\n}).then(response => {\n  expect(response).to.be.an('object');\n  expect(response.status).to.eql(200);\n});",
+              "err": {},
+              "uuid": "0d09fdfa-8dc4-4235-aceb-bf106b27fdef",
+              "parentUUID": "815c7d0a-a38c-4bca-88a3-e4861741fb1b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC3: REQUEST de Método POST a la API de TRELLO para CREAR UNA SEGUNDA CARD",
+              "fullTitle": "API Tests TC3: REQUEST de Método POST a la API de TRELLO para CREAR UNA SEGUNDA CARD",
+              "timedOut": null,
+              "duration": 452,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: 'https://api.trello.com/1/cards',\n  qs: {\n    key: key,\n    token: token,\n    idList: listA,\n    name: 'Nueva tarjeta : Metodo POST ✅'\n  }\n}).then(response => {\n  expect(response).to.be.an('object');\n  expect(response.status).to.eql(200);\n  expect(response.body.name).to.eql('Nueva tarjeta : Metodo POST ✅');\n  cardID = response.body.id;\n});",
+              "err": {},
+              "uuid": "d984b793-1554-420b-a0f3-3d9039cae143",
+              "parentUUID": "815c7d0a-a38c-4bca-88a3-e4861741fb1b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4: REQUEST de Método POST a la API de TRELLO para CREAR UNA TERCERA CARD",
+              "fullTitle": "API Tests TC4: REQUEST de Método POST a la API de TRELLO para CREAR UNA TERCERA CARD",
+              "timedOut": null,
+              "duration": 495,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: 'https://api.trello.com/1/cards',\n  qs: {\n    key: key,\n    token: token,\n    idList: listA,\n    name: 'Validaciones Exitosas : Metodo GET ✅'\n  }\n}).then(response => {\n  expect(response).to.be.an('object');\n  expect(response.status).to.eql(200);\n  expect(response.body.name).to.eql('Validaciones Exitosas : Metodo GET ✅');\n  cardID = response.body.id;\n});",
+              "err": {},
+              "uuid": "d5f51059-195a-418f-a927-00bbc9e8a44a",
+              "parentUUID": "815c7d0a-a38c-4bca-88a3-e4861741fb1b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC5: REQUEST de Método PUT a la API de TRELLO para EDITAR CARD1",
+              "fullTitle": "API Tests TC5: REQUEST de Método PUT a la API de TRELLO para EDITAR CARD1",
+              "timedOut": null,
+              "duration": 658,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'PUT',\n  url: 'https://api.trello.com/1/cards/' + card4,\n  qs: {\n    key: key,\n    token: token,\n    name: 'Tarjeta Editada: Metodo PUT ✅',\n    desc: 'Esto es una descripción para editar la Card previamente creada'\n  },\n  body: {\n    cover: {\n      color: 'yellow',\n      brightness: 'dark',\n      size: 'full'\n    }\n  }\n}).then(({\n  body\n}) => {\n  expect(body).to.be.an('object');\n  expect(body.id).to.eql(card4);\n  expect(body.name).to.eql('Tarjeta Editada: Metodo PUT ✅');\n  expect(body.desc).to.include('Esto es una descripción');\n  expect(body.cover).to.be.an('object').and.to.include({\n    color: 'green'\n  });\n});",
+              "err": {
+                "message": "AssertionError: expected { Object (idAttachment, color, ...) } to have property 'color' of 'green', but got 'yellow'",
+                "estack": "AssertionError: expected { Object (idAttachment, color, ...) } to have property 'color' of 'green', but got 'yellow'\n    at Context.eval (webpack://ProyectoAPI/./cypress/e2e/Trello/testAPI.api.cy.js:115:69)",
+                "diff": "- 'yellow'\n+ 'green'\n"
+              },
+              "uuid": "89847ca7-4cce-475c-80f7-f2b39550b9a5",
+              "parentUUID": "815c7d0a-a38c-4bca-88a3-e4861741fb1b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC6: REQUEST de Método DELETE a la API de TRELLO para ELIMINAR CARD2",
+              "fullTitle": "API Tests TC6: REQUEST de Método DELETE a la API de TRELLO para ELIMINAR CARD2",
+              "timedOut": null,
+              "duration": 594,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'DELETE',\n  url: 'https://api.trello.com/1/cards/' + card3,\n  qs: {\n    key: key,\n    token: token\n  }\n}).then(response => {\n  expect(response.body.limits).to.be.empty;\n  expect(response.status).to.eql(200);\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` failed on:\n\nhttps://api.trello.com/1/cards/67e374046f3c878317e23d28?key=8debb4f15c5425eb56779ba7be2e67ef&token=ATTA4fbd5476ee500f59c17e42cf03e1a74228448fc95210fe5db94d12e2eb06149a8390DF71\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: DELETE\nURL: https://api.trello.com/1/cards/67e374046f3c878317e23d28?key=8debb4f15c5425eb56779ba7be2e67ef&token=ATTA4fbd5476ee500f59c17e42cf03e1a74228448fc95210fe5db94d12e2eb06149a8390DF71\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.17.0 Chrome/118.0.5993.159 Electron/27.3.10 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-length\": 0\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"content-type\": \"text/plain; charset=utf-8\",\n  \"content-length\": \"37\",\n  \"connection\": \"keep-alive\",\n  \"date\": \"Mon, 07 Apr 2025 02:55:49 GMT\",\n  \"referrer-policy\": \"strict-origin-when-cross-origin\",\n  \"x-dns-prefetch-control\": \"off\",\n  \"x-download-options\": \"noopen\",\n  \"x-frame-options\": \"DENY\",\n  \"x-permitted-cross-domain-policies\": \"none\",\n  \"surrogate-control\": \"no-store\",\n  \"cache-control\": \"no-store, no-cache, must-revalidate, proxy-revalidate\",\n  \"expires\": \"0\",\n  \"x-trello-version\": \"1.341914.0\",\n  \"x-trello-environment\": \"Production\",\n  \"access-control-allow-origin\": \"*\",\n  \"access-control-allow-methods\": \"GET, PUT, POST, DELETE\",\n  \"access-control-allow-headers\": \"Authorization, Accept, Content-Type\",\n  \"access-control-expose-headers\": \"x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining, retry-after\",\n  \"x-rate-limit-api-token-interval-ms\": \"10000\",\n  \"x-rate-limit-api-token-max\": \"100\",\n  \"x-rate-limit-api-token-remaining\": \"94\",\n  \"x-rate-limit-db-query-time-interval-ms\": \"600000\",\n  \"x-rate-limit-db-query-time-max\": \"7200000\",\n  \"x-rate-limit-db-query-time-remaining\": \"7199990\",\n  \"x-rate-limit-api-key-interval-ms\": \"10000\",\n  \"x-rate-limit-api-key-max\": \"300\",\n  \"x-rate-limit-api-key-remaining\": \"294\",\n  \"x-rate-limit-member-interval-ms\": \"10000\",\n  \"x-rate-limit-member-max\": \"375\",\n  \"x-rate-limit-member-remaining\": \"369\",\n  \"server\": \"AtlassianEdge\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"atl-traceid\": \"94192fe491f94a35b835734c4fd377ea\",\n  \"atl-request-id\": \"94192fe4-91f9-4a35-b835-734c4fd377ea\",\n  \"strict-transport-security\": \"max-age=63072000; preload\",\n  \"report-to\": \"{\\\"endpoints\\\": [{\\\"url\\\": \\\"https://dz8aopenkvv6s.cloudfront.net\\\"}], \\\"group\\\": \\\"endpoint-1\\\", \\\"include_subdomains\\\": true, \\\"max_age\\\": 600}\",\n  \"nel\": \"{\\\"failure_fraction\\\": 0.001, \\\"include_subdomains\\\": true, \\\"max_age\\\": 600, \\\"report_to\\\": \\\"endpoint-1\\\"}\",\n  \"server-timing\": \"atl-edge;dur=52,atl-edge-internal;dur=4,atl-edge-upstream;dur=49,atl-edge-pop;desc=\\\"aws-us-east-1\\\"\",\n  \"x-cache\": \"Error from cloudfront\",\n  \"via\": \"1.1 7ec5482ff9419960d8baf5b22693fc38.cloudfront.net (CloudFront)\",\n  \"x-amz-cf-pop\": \"EZE50-P3\",\n  \"x-amz-cf-id\": \"W4F7AGUzqcDXXUySO1eQU332BOjf9I2A7Y--b2W0zTFvZIFoVoEENQ==\"\n}\nBody: The requested resource was not found.\n\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttps://api.trello.com/1/cards/67e374046f3c878317e23d28?key=8debb4f15c5425eb56779ba7be2e67ef&token=ATTA4fbd5476ee500f59c17e42cf03e1a74228448fc95210fe5db94d12e2eb06149a8390DF71\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: DELETE\nURL: https://api.trello.com/1/cards/67e374046f3c878317e23d28?key=8debb4f15c5425eb56779ba7be2e67ef&token=ATTA4fbd5476ee500f59c17e42cf03e1a74228448fc95210fe5db94d12e2eb06149a8390DF71\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.17.0 Chrome/118.0.5993.159 Electron/27.3.10 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-length\": 0\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"content-type\": \"text/plain; charset=utf-8\",\n  \"content-length\": \"37\",\n  \"connection\": \"keep-alive\",\n  \"date\": \"Mon, 07 Apr 2025 02:55:49 GMT\",\n  \"referrer-policy\": \"strict-origin-when-cross-origin\",\n  \"x-dns-prefetch-control\": \"off\",\n  \"x-download-options\": \"noopen\",\n  \"x-frame-options\": \"DENY\",\n  \"x-permitted-cross-domain-policies\": \"none\",\n  \"surrogate-control\": \"no-store\",\n  \"cache-control\": \"no-store, no-cache, must-revalidate, proxy-revalidate\",\n  \"expires\": \"0\",\n  \"x-trello-version\": \"1.341914.0\",\n  \"x-trello-environment\": \"Production\",\n  \"access-control-allow-origin\": \"*\",\n  \"access-control-allow-methods\": \"GET, PUT, POST, DELETE\",\n  \"access-control-allow-headers\": \"Authorization, Accept, Content-Type\",\n  \"access-control-expose-headers\": \"x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining, retry-after\",\n  \"x-rate-limit-api-token-interval-ms\": \"10000\",\n  \"x-rate-limit-api-token-max\": \"100\",\n  \"x-rate-limit-api-token-remaining\": \"94\",\n  \"x-rate-limit-db-query-time-interval-ms\": \"600000\",\n  \"x-rate-limit-db-query-time-max\": \"7200000\",\n  \"x-rate-limit-db-query-time-remaining\": \"7199990\",\n  \"x-rate-limit-api-key-interval-ms\": \"10000\",\n  \"x-rate-limit-api-key-max\": \"300\",\n  \"x-rate-limit-api-key-remaining\": \"294\",\n  \"x-rate-limit-member-interval-ms\": \"10000\",\n  \"x-rate-limit-member-max\": \"375\",\n  \"x-rate-limit-member-remaining\": \"369\",\n  \"server\": \"AtlassianEdge\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"atl-traceid\": \"94192fe491f94a35b835734c4fd377ea\",\n  \"atl-request-id\": \"94192fe4-91f9-4a35-b835-734c4fd377ea\",\n  \"strict-transport-security\": \"max-age=63072000; preload\",\n  \"report-to\": \"{\\\"endpoints\\\": [{\\\"url\\\": \\\"https://dz8aopenkvv6s.cloudfront.net\\\"}], \\\"group\\\": \\\"endpoint-1\\\", \\\"include_subdomains\\\": true, \\\"max_age\\\": 600}\",\n  \"nel\": \"{\\\"failure_fraction\\\": 0.001, \\\"include_subdomains\\\": true, \\\"max_age\\\": 600, \\\"report_to\\\": \\\"endpoint-1\\\"}\",\n  \"server-timing\": \"atl-edge;dur=52,atl-edge-internal;dur=4,atl-edge-upstream;dur=49,atl-edge-pop;desc=\\\"aws-us-east-1\\\"\",\n  \"x-cache\": \"Error from cloudfront\",\n  \"via\": \"1.1 7ec5482ff9419960d8baf5b22693fc38.cloudfront.net (CloudFront)\",\n  \"x-amz-cf-pop\": \"EZE50-P3\",\n  \"x-amz-cf-id\": \"W4F7AGUzqcDXXUySO1eQU332BOjf9I2A7Y--b2W0zTFvZIFoVoEENQ==\"\n}\nBody: The requested resource was not found.\n\n\nhttps://on.cypress.io/request\n    at <unknown> (http://localhost:59820/__cypress/runner/cypress_runner.js:132876:72)\n    at tryCatcher (http://localhost:59820/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (http://localhost:59820/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (http://localhost:59820/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (http://localhost:59820/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (http://localhost:59820/__cypress/runner/cypress_runner.js:1724:18)\n    at _drainQueueStep (http://localhost:59820/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (http://localhost:59820/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (http://localhost:59820/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (http://localhost:59820/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://ProyectoAPI/./cypress/e2e/Trello/testAPI.api.cy.js:121:19)",
+                "diff": null
+              },
+              "uuid": "3ce425d9-93bd-4787-909d-27a48301f606",
+              "parentUUID": "815c7d0a-a38c-4bca-88a3-e4861741fb1b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5089d2c6-b512-4f20-896c-f57cf0c4c0d1",
+            "0d09fdfa-8dc4-4235-aceb-bf106b27fdef",
+            "d984b793-1554-420b-a0f3-3d9039cae143",
+            "d5f51059-195a-418f-a927-00bbc9e8a44a"
+          ],
+          "failures": [
+            "89847ca7-4cce-475c-80f7-f2b39550b9a5",
+            "3ce425d9-93bd-4787-909d-27a48301f606"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 3205,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/test_results/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
