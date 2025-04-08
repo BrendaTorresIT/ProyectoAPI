@@ -14,7 +14,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                dir('QualityAssure/TestAPI') {
+                dir('BrendaIT/ProyectoAPI') {
                     bat 'npm install'
                 }
             }
@@ -22,7 +22,7 @@ pipeline {
 
         stage('Run Cypress Tests') {
             steps {
-                dir('QualityAssure/TestAPI') {
+                dir('BrendaIT/ProyectoAPI') {
                     bat 'echo MOSTRANDO ARCHIVOS...'
                     bat 'dir'
                     bat 'echo CONTENIDO DE cypress.config.js:'
