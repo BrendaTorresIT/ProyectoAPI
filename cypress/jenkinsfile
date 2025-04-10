@@ -23,15 +23,17 @@ pipeline {
         stage('Run Cypress Tests') {
             steps {
                 dir('BrendaIT/ProyectoAPI') {
-                    bat 'echo MOSTRANDO ARCHIVOS...'
-                    bat 'dir'
-                    bat 'echo CONTENIDO DE cypress.config.js:'
-                    bat 'type cypress.config.js'
-                    
-                    // Forzar lectura del archivo de configuración
-                    bat 'npx cypress run --config-file cypress.config.js --spec "cypress/e2e/testAPI.api.cy.js"'
+                   
+                    bat 'npx cypress run --spec "cypress/e2e/testAPI.api.cy.js"'
                 }
             }
         }
+        stage('Deploy')
+           steps{
+                 echo 'Exitoso'
+
+           }
+
+
     }
 }
