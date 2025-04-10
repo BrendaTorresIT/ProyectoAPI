@@ -23,17 +23,31 @@ pipeline {
         stage('Run Cypress Tests') {
             steps {
                 dir('BrendaIT/ProyectoAPI') {
-                   
                     bat 'npx cypress run --spec "cypress/e2e/testAPI.api.cy.js"'
                 }
             }
         }
-        stage('Deploy')
-           steps{
-                 echo 'Exitoso'
 
-           }
-
-
+        stage('Deploy') {
+            steps {
+                echo 'Despliegue exitoso'
+            }
+        }
     }
+
+    post {
+        always {
+            publishHTML([
+                allowMissing: false, 
+                alwaysLinkToLastBuild: true, 
+                icon: '', 
+                keepAll: false, 
+                reportDir: 'C:\\Users\\bre_3\\BrendaIT\\ProyectoAPI\\report', 
+                reportFiles: 'index.html', 
+                reportName: 'HTML Report', 
+                reportTitles: '', 
+                useWrapperFileDirectly: true
+         ])}
+    }
+       
 }
